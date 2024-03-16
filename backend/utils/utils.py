@@ -7,6 +7,8 @@ from langchain.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from config.config import embeddings, index, session, AWS_BUCKET_NAME,AWS_REGION
 
+#TODO: extract document vectors directly from Upload File FastAPI object
+
 def generate_document_vector(S3_URI:str):
     """
     Generate document vectors from a PDF file at a given S3 URI.

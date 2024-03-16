@@ -8,11 +8,17 @@ import Spinner from "./Spinner";
 import axios from "axios";
 
 const Header = () => {
-  const { pdfName, pdfNamespace, setPDF } = usePDF();
+  // ---States---
   const [selectedPDF, setSelectedPDF] = useState<File | null>(null);
-  const formRef = useRef<HTMLFormElement | null>(null);
   const [loading, setLoading] = useState(false);
 
+  // ---Custom Hooks---
+  const { pdfName, pdfNamespace, setPDF } = usePDF();
+
+  //  ---Refs---
+  const formRef = useRef<HTMLFormElement | null>(null);
+
+  // ---Functions---
   const handleFileChange = async (
     event: React.ChangeEvent<HTMLInputElement>
   ) => {
@@ -45,8 +51,9 @@ const Header = () => {
     }
   };
 
+  // ---Render---
   return (
-    <div className="flex flex-col h-[10vh] justify-center border-b-2">
+    <div className="flex flex-col h-[10vh] justify-center border-b-2 shadow-md">
       <div className="flex flex-row justify-between">
         <div className="ml-4">
           <Logo />

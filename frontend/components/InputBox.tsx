@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { Input } from "./ui/input";
 import { SendHorizontal } from "lucide-react";
 import { Button } from "./ui/button";
 import Spinner from "./Spinner";
@@ -10,13 +9,19 @@ import toast from "react-hot-toast";
 import usePDF from "@/hooks/UsePDF";
 
 const InputBox = () => {
+  // ---States---
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState("");
+
+  // ---Custom Hooks---
   const { appendChat } = useChat();
   const { pdfNamespace } = usePDF();
 
+  // ---Functions---
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (!query) return;
+
     if (pdfNamespace === "") {
       appendChat({ owner: "USER", content: query });
       setQuery("");
@@ -27,7 +32,7 @@ const InputBox = () => {
 
       return;
     }
-    if (!query) return;
+
     setLoading(true);
     appendChat({ owner: "USER", content: query });
 
@@ -53,6 +58,7 @@ const InputBox = () => {
     setLoading(false);
   };
 
+  // ---Render---
   return (
     <div className="h-[10vh] ">
       <form className="flex flex-row items-center justify-between px-3 py-2 mx-12 border-2 rounded-2xl border-slate-200 bg-slate-100 text-slate-black xl:mx-18 2xl:mx-48">

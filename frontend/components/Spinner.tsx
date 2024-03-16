@@ -1,4 +1,5 @@
 const Spinner = () => {
+  // ---Render---
   return (
     <div className="flex items-center justify-center">
       <svg

@@ -10,6 +10,7 @@ type ChatState = {
   appendChat: (message: ChatMessage) => void;
 };
 
+// custom hook for chat state management
 const useChat = create<ChatState>((set) => ({
   chat: [],
   appendChat: (message) => set((state) => ({ chat: [...state.chat, message] })),

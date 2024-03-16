@@ -12,7 +12,7 @@ interface ChatBubbleProps {
 
 const ChatBubble: React.FC<ChatBubbleProps> = ({ message }) => {
   return (
-    <div className="container pt-4">
+    <div className="pt-4">
       <div>
         <div className="flex flex-row items-center justify-start gap-4">
           <div className="w-8 h-8 rounded-full bg-slate-100">

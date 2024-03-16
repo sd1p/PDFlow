@@ -6,6 +6,7 @@ type pdfState = {
   setPDF: (pdfName: string, pdfNamespace: string) => void;
 };
 
+// custom hook for pdf state management
 const usePDF = create<pdfState>((set) => ({
   pdfName: "",
   pdfNamespace: "",

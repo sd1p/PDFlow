@@ -86,7 +86,7 @@ This project is a demonstration of a chat application integrated with PDF proces
 
 The application follows a client-server architecture. The backend server is implemented using FastAPI, which handles API requests from the frontend. Langchain is integrated into the backend to process natural language queries and retrieve relevant information from the PDF documents stored in the Pinecone vector database. AWS S3 is used for storing PDF files uploaded by users. The frontend is built using Next.js, providing a user-friendly interface for interacting with the application.
 
-[![Application Architecture](https://i.postimg.cc/9FYb3MbY/pdflow.png)](https://postimg.cc/xcqMM9WX)
+[![Application Architecture](https://i.postimg.cc/661NxvJV/pdflow2.png)](https://postimg.cc/0rm4prNr)
 
 ## Demo
 

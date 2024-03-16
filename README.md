@@ -90,4 +90,9 @@ The application follows a client-server architecture. The backend server is impl
 
 ## Demo
 
-A live demo of the application can be accessed [here](#).
+A live demo of the application can be accessed [here](https://drive.google.com/file/d/1BsXxbTly-duj3FzifwMqZWOcROG4q3CJ/view?usp=sharing).
+
+https://github.com/sd1p/aiplanet/assets/43758514/c0420af1-2029-45e6-abbf-7a538043c2a4
+
+
+

@@ -20,6 +20,9 @@ AWS_BUCKET_NAME = os.getenv("AWS_BUCKET_NAME")
 # Get environment variable for OpenAI
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
+# Get environment variable for the frontend URL 
+APP_FRONTEND_URL = os.getenv("APP_FRONTEND_URL")
+
 # Initialize Pinecone with the API key
 pc = Pinecone(api_key=PINECONE_API_KEY)
 

@@ -9,7 +9,7 @@ This project is a demonstration of a chat application integrated with PDF proces
 ### Setup Instructions
 
 1. Clone the repository:
-2. `git clone https://github.com/yourusername/projectname.git`
+2. `git clone https://github.com/sd1p/aiplanet.git`
 3. Install dependencies for both backend and frontend:
 4. `cd backend`
 5. `pip install -r requirements.txt`

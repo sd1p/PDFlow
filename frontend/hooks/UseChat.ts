@@ -12,7 +12,12 @@ type ChatState = {
 
 // custom hook for chat state management
 const useChat = create<ChatState>((set) => ({
-  chat: [],
+  chat: [
+    {
+      owner: "ASSISTANT",
+      content: "Please upload a PDF file to get started!",
+    },
+  ],
   appendChat: (message) => set((state) => ({ chat: [...state.chat, message] })),
 }));
 

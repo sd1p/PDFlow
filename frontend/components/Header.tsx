@@ -15,9 +15,6 @@ const Header = () => {
   // ---Custom Hooks---
   const { pdfName, pdfNamespace, setPDF } = usePDF();
 
-  //  ---Refs---
-  const formRef = useRef<HTMLFormElement | null>(null);
-
   // ---Functions---
   const handleFileChange = async (
     event: React.ChangeEvent<HTMLInputElement>
@@ -56,7 +53,7 @@ const Header = () => {
     <div className="flex flex-col h-[10vh] justify-center border-b-2 shadow-md">
       <div className="flex flex-row justify-between">
         <div className="ml-4">
-          <Logo />
+          <h1 className="font-bold text-3xl">PDFlow</h1>
         </div>
         <div className="flex flex-row items-center mr-4">
           {pdfName !== "" ? (
@@ -88,6 +85,7 @@ const Header = () => {
               type="file"
               className="hidden"
               onChange={handleFileChange}
+              disabled={loading}
             />
           </label>
         </div>

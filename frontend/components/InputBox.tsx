@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { SendHorizontal } from "lucide-react";
 import { Button } from "./ui/button";
 import Spinner from "./Spinner";
@@ -16,6 +16,9 @@ const InputBox = () => {
   // ---Custom Hooks---
   const { appendChat } = useChat();
   const { pdfNamespace } = usePDF();
+
+  // ---Refs---
+  const inputRef = useRef<HTMLInputElement>(null);
 
   // ---Functions---
   const handleSubmit = async (e: React.FormEvent) => {
@@ -58,13 +61,21 @@ const InputBox = () => {
     setLoading(false);
   };
 
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, []);
+
   // ---Render---
   return (
     <div className="h-[10vh] ">
       <form className="flex flex-row items-center justify-between px-3 py-2 mx-12 border-2 rounded-2xl border-slate-200 bg-slate-100 text-slate-black xl:mx-18 2xl:mx-48">
         <input
+          ref={inputRef}
           disabled={loading}
           value={query}
+          accept="application/pdf"
           type="text"
           placeholder="Send a message"
           className="w-[100%] h-[4vh] bg-slate-100 placeholder-slate-300 focus:outline-none"

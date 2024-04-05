@@ -16,7 +16,7 @@ This project is a demonstration of a chat application integrated with PDF proces
 6. `cd ../frontend`
 7. `npm install`
 8. Configure environment variables:
-   - Create a `.env` file in the backend directory and set the required variables (e.g., AWS S3 credentials).
+   - Create a `.env` file in the backend directory and set the required variables.
 
         ```env
         OPENAI_API_KEY=
@@ -29,7 +29,7 @@ This project is a demonstration of a chat application integrated with PDF proces
         APP_FRONTEND_URL=
         ```
 
-   - Create a `.env.local` file in the frontend directory and set the required variables (e.g., API endpoint URLs).
+   - Create a `.env.local` file in the frontend directory and set the required variables.
 
         ```env
         NEXT_PUBLIC_BACKEND_URI=

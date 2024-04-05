@@ -7,6 +7,6 @@ langchain_text_splitters==0.0.1
 pinecone-client==3.1.0
 pydantic==2.6.4
 python-dotenv==1.0.1
-uvicorn
-pypdf2
-python-multipart 
+uvicorn==0.28.0
+pypdf2==3.0.1
+python-multipart==0.0.9

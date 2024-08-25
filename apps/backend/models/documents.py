@@ -41,7 +41,7 @@ class DocumentVector:
             "id": str(self.id),
             "document_id": str(self.document_id),
             "vector": self.vector,
-            "metadata": json.dumps(self.metadata),  # Store metadata as JSON
+            "metadata": json.dumps(self.metadata),  
             "created_at": self.created_at.isoformat()
         }
 

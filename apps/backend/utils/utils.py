@@ -11,13 +11,11 @@ from langchain_community.document_loaders.base import BaseLoader
 from typing import List, Optional, Union
 from langchain_core.documents.base import Blob
 
-
 class CustomPDFLoader(BaseLoader):
     """
     CustomPDFLoader to load pdf file directly from BytesIO stream.
 
     """
-
     def __init__(
         self,
         stream: BytesIO,

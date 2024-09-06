@@ -15,7 +15,7 @@ const InputBox = () => {
 
   // ---Custom Hooks---
   const { appendChat } = useChat();
-  const { pdfNamespace } = usePDF();
+  const { documentId } = usePDF();
 
   // ---Refs---
   const inputRef = useRef<HTMLInputElement>(null);
@@ -25,7 +25,7 @@ const InputBox = () => {
     e.preventDefault();
     if (!query) return;
 
-    if (pdfNamespace === "") {
+    if (documentId === "") {
       appendChat({ owner: "USER", content: query });
       setQuery("");
       appendChat({
@@ -41,7 +41,7 @@ const InputBox = () => {
 
     let data = JSON.stringify({
       query,
-      namespace: pdfNamespace,
+      document_id: documentId,
     });
 
     setQuery("");
@@ -55,6 +55,8 @@ const InputBox = () => {
         appendChat({ owner: "ASSISTANT", content: response.data.output_text });
       })
       .catch((error) => {
+        console.log(error);
+
         toast.error("Error: " + error.message);
       });
 

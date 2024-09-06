@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  pdflow-backend:
+    build: .
+    image: pdflow-backend
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"

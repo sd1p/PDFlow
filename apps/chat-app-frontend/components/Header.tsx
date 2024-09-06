@@ -13,7 +13,7 @@ const Header = () => {
   const [loading, setLoading] = useState(false);
 
   // ---Custom Hooks---
-  const { pdfName, pdfNamespace, setPDF } = usePDF();
+  const { pdfName, documentId, setPDF } = usePDF();
 
   // ---Functions---
   const handleFileChange = async (
@@ -37,7 +37,7 @@ const Header = () => {
             },
           }
         );
-        setPDF(file.name, response.data.namespace);
+        setPDF(file.name, response.data.id);
       } catch (error) {
         toast.error("Error uploading PDF");
       } finally {

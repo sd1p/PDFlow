@@ -6,46 +6,11 @@ This project is a demonstration of a chat application integrated with PDF proces
 
 ## Documentation
 
-### Setup Instructions
-
-1. Clone the repository:
-2. `git clone https://github.com/sd1p/aiplanet.git`
-3. Install dependencies for both backend and frontend:
-4. `cd backend`
-5. `pip install -r requirements.txt`
-6. `cd ../frontend`
-7. `npm install`
-8. Configure environment variables:
-   - Create a `.env` file in the backend directory and set the required variables.
-
-        ```env
-        OPENAI_API_KEY=
-        PINECONE_API_KEY=
-        PINECONE_INDEX_NAME=
-        AWS_ACCESS_KEY_ID=
-        AWS_SECRET_ACCESS_KEY=
-        AWS_REGION= 
-        AWS_BUCKET_NAME=
-        APP_FRONTEND_URL=
-        ```
-
-   - Create a `.env.local` file in the frontend directory and set the required variables.
-
-        ```env
-        NEXT_PUBLIC_BACKEND_URI=
-        ```
-
-9. Run the backend server:
-10. `cd backend`
-11. `uvicorn main:app --reload --port 8000`
-12. Run the frontend application:
-13. `cd frontend`
-14. `npm run dev`
-15. Run the app at `http://localhost:3000/`
-
 ### API Documentation
 
-#### Deployment Endpoint - `https://aiplanet-qp6q.onrender.com`
+#### Backend Deployment Endpoint - `https://pdflow-backend-pdf-svc.sudipmandal.me/`
+
+#### Swagger docs `https://pdflow-backend-pdf-svc.sudipmandal.me/docs`
 
 #### `/api/upload`
 
@@ -57,10 +22,10 @@ This project is a demonstration of a chat application integrated with PDF proces
 - `response` (json) : Contains `fileName`, `namespace`, `URI`
   
   ```json
-    {
+    {   "id": " ",
         "fileName": "",
-        "namespace": "",
-        "URI": ""
+        "s3_url": "",
+        "created_at": ""
     }
   ```
 
@@ -69,7 +34,7 @@ This project is a demonstration of a chat application integrated with PDF proces
 - **Method:** POST
 - **Description:** Initiates a conversation with the provided PDF document.
 - **Parameters:**
-- `namespace` (str): The unique identifier of the uploaded PDF document.
+- `document_id` (str): The unique identifier of the uploaded PDF document.
 - `query` (str): The question to ask regarding the document.
 - **Response:**
 - `response` (json): Contains `input_documents`, `output_text`, `question`
@@ -92,5 +57,4 @@ The application follows a client-server architecture. The backend server is impl
 
 A live demo of the application can be accessed [here](https://drive.google.com/file/d/1BsXxbTly-duj3FzifwMqZWOcROG4q3CJ/view?usp=sharing).
 
-https://github.com/sd1p/aiplanet/assets/43758514/c0420af1-2029-45e6-abbf-7a538043c2a4
-
+<https://github.com/sd1p/aiplanet/assets/43758514/c0420af1-2029-45e6-abbf-7a538043c2a4>

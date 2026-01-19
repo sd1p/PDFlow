@@ -1,3 +1,6 @@
 *.env
 chat-app-backend-express/
 node_modules/
+.env
+.venv/
+.pnpm-store/
